@@ -6,8 +6,8 @@ function TodoItem1() {
 
 
   return (
-    <div class="items-container">
-      <div class="row">
+    <div class="container">
+      <div class="row kg-row">
         <div class="col-4">{todoName}</div>
         <div class="col-4">{todoDate}</div>
         <div class="col-2">
