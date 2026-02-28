@@ -2,22 +2,30 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/ErrorMessage";
 import './App.css'
+import Container from "./components/Container";
+import FoodInput from "./components/FoodInput";
 
 
 function App () {
 
-  let foodItems = ['Panner', 'Rice', 'Roti', 'Vegetables', 'Salad','Milk']
+  let foodItems = ['Panner', 'Rice', 'Roti', 'Vegetables', 'Salad','Milk'];
+
+
+   const handleOnChange = (event) => {
+        console.log(event.target.value);
+    }
 
 
   return (
   
-  <>
-    <h1>Healthy Food</h1>
+  <Container>
+    <h1 className="foodHeading">Healthy Food</h1>
     <ErrorMessage items={foodItems}></ErrorMessage>
+    <FoodInput handleOnChange={handleOnChange}></FoodInput>
     <FoodItems items={foodItems}></FoodItems>
     
-  </>
+  </Container>
   )
 }
 
-export default App
+export default App;
